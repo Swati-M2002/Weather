@@ -1,0 +1,8 @@
+/* Import Fonts */
+@import url('https://www.freepik.com/font/chalky-chalkboard');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  Arial, Helvetica, sans-serif;
+}
