@@ -99,3 +99,4 @@ const getUserCoordinates = () => {
 }
 searchButton.addEventListener("click", getCityCoordinates); 
 locationButton.addEventListener("click", getUserCoordinates); 
+cityInput.addEventListener("keyup" , e => e.key === "Enter" && getCityCoordinates());
