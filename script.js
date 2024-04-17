@@ -83,8 +83,8 @@ const getUserCoordinates = () => {
 
             // Get city name from coordinates using reverse geocoding API
             fetch(REVERSE_GEOCODING_URL).then(res => res.json()).then(data => {
-                const { name, latitude, longitude } = data[0];
-                getWeatherDetails(name, latitude, longitude);
+                const { name, lat, lon } = data[0];
+                getWeatherDetails(name, lat, lon);
         })
         .catch(() => {
             alert("An error occurred while fetching the coordinates!");
@@ -97,6 +97,8 @@ const getUserCoordinates = () => {
         }
     );
 }
+
+
 searchButton.addEventListener("click", getCityCoordinates); 
 locationButton.addEventListener("click", getUserCoordinates); 
 cityInput.addEventListener("keyup" , e => e.key === "Enter" && getCityCoordinates());
